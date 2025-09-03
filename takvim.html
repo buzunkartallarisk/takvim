@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buzun Kartalları 2025-2026 Sezon Takvimi</title>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      background-color: #f4f4f9;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 1.5em; /* Smaller font for mobile */
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    #calendar {
+      max-width: 100%;
+      margin: 0 auto;
+      background-color: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .fc-event {
+      font-size: 0.8em; /* Smaller event text for mobile */
+      line-height: 1.2;
+      padding: 2px;
+    }
+    .fc .fc-toolbar {
+      flex-wrap: wrap; /* Allow toolbar buttons to wrap */
+      font-size: 0.9em;
+    }
+    .fc .fc-toolbar-title {
+      font-size: 1em; /* Smaller title in toolbar */
+      margin: 5px 0;
+    }
+    .fc .fc-button {
+      padding: 5px 8px;
+      font-size: 0.8em;
+    }
+    /* Mobile-specific adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.2em;
+      }
+      #calendar {
+        padding: 5px;
+      }
+      .fc-event {
+        font-size: 0.7em; /* Even smaller event text for very small screens */
+      }
+      .fc .fc-toolbar {
+        flex-direction: column;
+        align-items: center;
+      }
+      .fc .fc-toolbar-title {
+        font-size: 0.9em;
+      }
+      .fc .fc-button {
+        margin: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Buzun Kartalları Spor Kulübü<br>2025 – 2026 Sezon Faaliyet ve Etkinlik Takvimi</h1>
+  <div id="calendar"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth', // Default view
+        locale: 'tr',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        events: [
+          {
+            title: 'Sezon Başlangıcı',
+            start: '2025-09-13',
+            backgroundColor: '#3498db',
+            borderColor: '#3498db'
+          },
+          {
+            title: 'Sezon Toplantısı – Hocaların Tanıtımı & Bilgilendirme',
+            start: '2025-09-20',
+            backgroundColor: '#3498db',
+            borderColor: '#3498db'
+          },
+          {
+            title: 'Spor Psikolojisi Semineri (Sporcular için)',
+            start: '2025-09-26',
+            backgroundColor: '#e67e22',
+            borderColor: '#e67e22'
+          },
+          {
+            title: 'Fizyoterapist Bilgilendirme',
+            start: '2025-10-03',
+            backgroundColor: '#e67e22',
+            borderColor: '#e67e22'
+          },
+          {
+            title: 'Diyetisyen Semineri',
+            start: '2025-10-10',
+            backgroundColor: '#e67e22',
+            borderColor: '#e67e22'
+          },
+          {
+            title: 'Federasyon İl Maçları (Başlangıç)',
+            start: '2025-11-01',
+            backgroundColor: '#2ecc71',
+            borderColor: '#2ecc71'
+          },
+          {
+            title: 'Ara Tatil – Bireysel Çalışmalar',
+            start: '2025-11-10',
+            end: '2025-11-15',
+            backgroundColor: '#9b59b6',
+            borderColor: '#9b59b6'
+          },
+          {
+            title: 'Sömestr Kampı (Tekirdağ, Gebze, Bursa, İzmir)',
+            start: '2026-01-18',
+            end: '2026-01-26',
+            backgroundColor: '#9b59b6',
+            borderColor: '#9b59b6'
+          },
+          {
+            title: 'Hazırlık Maçları',
+            start: '2026-02-10',
+            backgroundColor: '#2ecc71',
+            borderColor: '#2ecc71'
+          },
+          {
+            title: 'Verita U9 Turnuvası',
+            start: '2026-04-20',
+            end: '2026-04-25',
+            backgroundColor: '#2ecc71',
+            borderColor: '#2ecc71'
+          },
+          {
+            title: 'Türkiye Şampiyonası',
+            start: '2026-06-01',
+            end: '2026-06-21',
+            backgroundColor: '#2ecc71',
+            borderColor: '#2ecc71'
+          },
+          {
+            title: 'İftar Yemeği',
+            start: '2026-03-27',
+            backgroundColor: '#e74c3c',
+            borderColor: '#e74c3c'
+          },
+          {
+            title: 'Piknik Organizasyonu',
+            start: '2026-06-28',
+            backgroundColor: '#e74c3c',
+            borderColor: '#e74c3c'
+          }
+        ],
+        eventClick: function(info) {
+          alert('Etkinlik: ' + info.event.title + '\nTarih: ' + info.event.start.toLocaleDateString('tr-TR'));
+        },
+        // Mobile-specific calendar settings
+        eventMaxHeight: 50, // Limit event height to prevent overflow
+        aspectRatio: 1.35, // Adjust calendar aspect ratio for mobile
+        dayMaxEventRows: 3, // Limit number of events shown per day
+        views: {
+          dayGridMonth: {
+            dayMaxEventRows: 3 // Limit events in month view
+          }
+        }
+      });
+      calendar.render();
+    });
+  </script>
+</body>
+</html>
